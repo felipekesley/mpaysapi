@@ -1,17 +1,14 @@
 {
-  "name": "json-server-auth",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "json-server db.json -m ./node_modules/json-server-auth"
+    "dev": "nodemon ./server.js",
+    "start": "node ./server.js"
   },
-  "keywords": [],
-  "author": "Felipe Kesley",
-  "license": "ISC",
-  "devDependencies": {
-    "json-server": "^0.17.1",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "json-server": "^0.16.3",
     "json-server-auth": "^2.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
   }
 }

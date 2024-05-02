@@ -1,21 +1,20 @@
-// See https://github.com/typicode/json-server#module
 const jsonServer = require("json-server");
 const auth = require("json-server-auth");
-const server = jsonServer.create();
+const cors = require("cors");
+const port = process.env.PORT || 3001;
+const routes = require('./routes.json');
+
+const app = jsonServer.create();
 const router = jsonServer.router("db.json");
 
-const rules = auth.rewriter({
-  users: 600,
-  posts: 600,
-  "/posts/:category": "/posts?category=:category",
-});
+app.db = router.db;
 
-server.use(rules);
-server.use(auth);
-server.use(router);
-server.listen(3008, () => {
-  console.log("JSON Server is running");
-});
+const rules = auth.rewriter(routes);
 
-// Export the Server API
-module.exports = server;
+app.use(cors());
+app.use(rules);
+app.use(auth);
+app.use(router);
+app.listen(port);
+
+console.log("Server is running on port:", port);
