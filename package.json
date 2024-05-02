@@ -1,0 +1,17 @@
+{
+  "name": "json-server-auth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "json-server db.json -m ./node_modules/json-server-auth"
+  },
+  "keywords": [],
+  "author": "Felipe Kesley",
+  "license": "ISC",
+  "devDependencies": {
+    "json-server": "^0.17.1",
+    "json-server-auth": "^2.1.0"
+  }
+}

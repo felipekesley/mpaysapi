@@ -1,0 +1,21 @@
+{
+  "users": [
+    {
+      "name": "Felipe Kesley",
+      "email": "kesley@email.com",
+      "password": "$2a$10$XATL/oH1YovYZ1kS/Gu6Out7OVfeg4tB8kjK26On48aKlBUKfWqQi",
+      "id": 1
+    }
+  ],
+  "posts": [
+    {
+      "title": "teste",
+      "slug": "teste",
+      "content": "um texto",
+      "image": "https://via.placeholder.com/400x280.png",
+      "createdAt": "",
+      "userId": 1,
+      "id": 1
+    }
+  ]
+}
